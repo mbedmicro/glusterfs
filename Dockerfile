@@ -16,6 +16,8 @@ ADD newrelic-sysmond /etc/sysconfig/newrelic-sysmond
 ADD start-gluster.sh /usr/local/sbin/start-gluster.sh
 CMD /usr/local/sbin/start-gluster.sh
 
+ENV HOME /root
+
 VOLUME /tmp
 VOLUME /run     
 
