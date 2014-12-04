@@ -5,7 +5,7 @@ RUN yum --setopt=tsflags=nodocs -y update
 RUN yum --setopt=tsflags=nodocs -y install wget
 RUN rpm -Uvh http://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm
 RUN wget http://download.gluster.org/pub/gluster/glusterfs/LATEST/CentOS/glusterfs-epel.repo -O /etc/yum.repos.d/glusterfs-epel.repo
-RUN yum --setopt=tsflags=nodocs -y install glusterfs glusterfs-server glusterfs-fuse glusterfs-geo-replication glusterfs-cli glusterfs-api attr nfs-utils newrelic-sysmond python-setuptools
+RUN yum --setopt=tsflags=nodocs -y install glusterfs glusterfs-server glusterfs-fuse glusterfs-geo-replication glusterfs-cli glusterfs-api attr nfs-utils newrelic-sysmond openssh-clients
 RUN yum clean all
 RUN easy_install supervisor
 
