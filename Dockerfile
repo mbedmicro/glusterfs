@@ -17,6 +17,7 @@ ADD start-gluster.sh /usr/local/sbin/start-gluster.sh
 CMD /usr/local/sbin/start-gluster.sh
 
 ENV HOME /root
+ENV TERM xterm
 
 VOLUME /tmp
 VOLUME /run     
