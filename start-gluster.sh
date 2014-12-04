@@ -1,7 +1,5 @@
 
 
-service rpcbind start
-
 # Start newrelic monitoring
 service newrelic-sysmond start
 
@@ -11,8 +9,7 @@ service glusterd start
 shutdown_gluster()
 {
   service glusterd stop
-  service newrelic-sysmond stop
-  service rpcbind stop
+  service newrelic-sysmond stop  
   exit $?
 }
 
